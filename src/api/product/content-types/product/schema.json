@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productname": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "t-shirt",
+        "playing",
+        "pant"
+      ],
+      "required": false
+    },
+    "price": {
+      "type": "integer"
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "productname"
+    }
+  }
+}
